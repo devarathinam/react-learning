@@ -144,6 +144,7 @@ class RegisterPage extends Component{
         <button className="create-btn" onClick={() => this.onCreateAccount()}>Create Account</button>
         <h1>My name is {my_name}</h1>
         <h1>The student name is {this.state.first_name}</h1>
+        <h2>Hi hello</h2>
       </div>
     )
   }
