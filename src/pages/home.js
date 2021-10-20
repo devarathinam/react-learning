@@ -1,7 +1,24 @@
 import React, {Component} from "react";
 import {NavLink} from 'react-router-dom';
+import axios from "axios";
 
 class Home extends Component{
+
+
+  listUser(){
+    const url = "http://localhost:8080/api/user/list";
+
+    axios.get(url)
+    .then((response) => {
+      console.log(response)
+
+    })
+    .catch((error) => {
+      console.log(error)
+
+    })
+   
+  }
 
   render(){
     return(
@@ -16,6 +33,7 @@ class Home extends Component{
         <NavLink to="/contact">Contact</NavLink>
         <br/>
         <NavLink to="/mail">Go to Mail Page  </NavLink>
+        <button onClick={() => this.listUser()}>List the User Profile</button>
       </div>
     )
   }
